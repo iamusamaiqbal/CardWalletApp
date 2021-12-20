@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentStart="true"
+
+            android:src="@drawable/logo_test" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/titel_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:text="DIGI Card Wallet"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+<!--    <GridLayout-->
+<!--        android:id="@+id/grid"-->
+<!--        android:layout_width="400dp"-->
+<!--        android:layout_height="300dp"-->
+<!--        android:layout_marginLeft="5dp"-->
+<!--        android:layout_marginTop="200dp"-->
+<!--        android:columnCount="2"-->
+<!--        android:rowCount="3"-->
+
+
+<!--        >-->
+
+
+<!--        <com.google.android.material.card.MaterialCardView-->
+
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_row="0"-->
+<!--            android:layout_rowWeight="1"-->
+<!--            android:layout_column="0"-->
+<!--            android:layout_columnWeight="1"-->
+<!--            android:layout_gravity="fill"-->
+<!--            android:layout_margin="8dp"-->
+<!--            app:cardCornerRadius="8dp"-->
+<!--            app:cardElevation="8dp"-->
+<!--            app:cardPreventCornerOverlap="false"-->
+<!--            app:contentPadding="1dp"-->
+<!--            app:strokeColor="@color/back22"-->
+
+
+<!--            >-->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="400dp"
+            android:layout_marginTop="0dp"
+            android:src="@drawable/mainnnn" />
+
+        <Button
+            android:id="@+id/card_1"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/buttonn"
+            android:gravity="center"
+            android:text="Add Card"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+
+        <!--                <TextView-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:text="Add Your Card"-->
+        <!--                    android:textAlignment="center"-->
+        <!--                    android:textColor="@color/black"-->
+        <!--                    android:textSize="20sp"-->
+        <!--                    android:textStyle="bold" />-->
+
+
+    </LinearLayout>
+
+
+<!--        </com.google.android.material.card.MaterialCardView>-->
+
+
+<!--    </GridLayout>-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/grid"-->
+<!--        android:layout_marginTop="90dp"-->
+<!--        android:gravity="center"-->
+<!--        android:orientation="horizontal">-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/ratting_bar"-->
+<!--            android:layout_width="55dp"-->
+<!--            android:layout_height="100dp"-->
+<!--            android:src="@drawable/starr" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/share"-->
+<!--            android:layout_width="55dp"-->
+<!--            android:layout_height="100dp"-->
+<!--            android:layout_marginLeft="30dp"-->
+<!--            android:src="@drawable/ic_sharesvg" />-->
+
+
+<!--    </LinearLayout>-->
+</RelativeLayout>

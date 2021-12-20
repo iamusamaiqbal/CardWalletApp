@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+
+    <item android:id="@+id/setting_c"
+        android:title="Setting"
+        android:icon="@drawable/setting"
+        />
+    <item android:id="@+id/ratting_c"
+        android:icon="@drawable/star"
+        app:showAsAction="never"
+        android:title="Ratting Bar"/>
+    <item android:id="@+id/share_c"
+        app:showAsAction="never"
+        android:title="Share"
+        android:icon="@drawable/ic_baseline_share_24"
+        />
+
+</menu>

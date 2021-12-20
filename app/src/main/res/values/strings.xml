@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">DIGI CARD WALLET</string>
+    <string-array name="more_categories">
+        <item>Select Card</item>
+        <item>Business</item>
+        <item>Credit</item>
+        <item>Debit</item>
+        <item>Voting</item>
+        <item>Driving</item>
+        <item>Employee</item>
+        <item>Id Card</item>
+        <item>Passport</item>
+        <item>Shopping</item>
+    </string-array>
+</resources>
