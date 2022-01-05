@@ -284,17 +284,17 @@ public class Add_New_Card extends AppCompatActivity {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (requestCode == 101) {
 
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R){
-
-                boolean p = grantResults[0] == PackageManager.PERMISSION_GRANTED;
-
-                if (p) {
-                    Toast.makeText(this, "Permission granted", Toast.LENGTH_LONG).show();
-                } else {
-                    Toast.makeText(this, "Permission denied", Toast.LENGTH_LONG).show();
-                }
-
-            } else {
+//            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R){
+//
+//                boolean p = grantResults[0] == PackageManager.PERMISSION_GRANTED;
+//
+//                if (p) {
+//                    Toast.makeText(this, "Permission granted", Toast.LENGTH_LONG).show();
+//                } else {
+//                    Toast.makeText(this, "Permission denied", Toast.LENGTH_LONG).show();
+//                }
+//
+//            } else {
                 boolean p = grantResults[0] == PackageManager.PERMISSION_GRANTED;
                 boolean p1 = grantResults[1] == PackageManager.PERMISSION_GRANTED;
                 boolean p2 = grantResults[2] == PackageManager.PERMISSION_GRANTED;
@@ -304,7 +304,7 @@ public class Add_New_Card extends AppCompatActivity {
                 } else {
                     Toast.makeText(this, "Permission denied", Toast.LENGTH_LONG).show();
                 }
-            }
+//            }
         }
     }
 
@@ -358,43 +358,43 @@ public class Add_New_Card extends AppCompatActivity {
     }
 
     public void askPermission(){
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-            try {
-
-                ActivityCompat.requestPermissions(this, new String[] {
-                        Manifest.permission.CAMERA},101);
-
-                Intent intent = new Intent(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION);
-                intent.addCategory("android.intent.category.DEFAULT");
-                intent.setData(Uri.parse(String.format("package:%s", getApplicationContext().getPackageName())));
-                startActivityForResult(intent, 2296);
-            } catch (Exception e) {
-                Intent intent = new Intent();
-                intent.setAction(Settings.ACTION_MANAGE_ALL_FILES_ACCESS_PERMISSION);
-                startActivityForResult(intent, 2296);
-            }
-        } else {
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+//            try {
+//
+//                ActivityCompat.requestPermissions(this, new String[] {
+//                        Manifest.permission.CAMERA},101);
+//
+//                Intent intent = new Intent(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION);
+//                intent.addCategory("android.intent.category.DEFAULT");
+//                intent.setData(Uri.parse(String.format("package:%s", getApplicationContext().getPackageName())));
+//                startActivityForResult(intent, 2296);
+//            } catch (Exception e) {
+//                Intent intent = new Intent();
+//                intent.setAction(Settings.ACTION_MANAGE_ALL_FILES_ACCESS_PERMISSION);
+//                startActivityForResult(intent, 2296);
+//            }
+//        } else {
             ActivityCompat.requestPermissions(this, new String[] {
                     Manifest.permission.CAMERA,
                     Manifest.permission.WRITE_EXTERNAL_STORAGE,
                     Manifest.permission.READ_EXTERNAL_STORAGE}, 101);
-        }
+//        }
     }
 
     private boolean checkPermission() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-
-            int result2 = ContextCompat.checkSelfPermission(this,Manifest.permission.CAMERA);
-            return Environment.isExternalStorageManager() && result2 == PackageManager.PERMISSION_GRANTED ;
-
-        } else {
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+//
+//            int result2 = ContextCompat.checkSelfPermission(this,Manifest.permission.CAMERA);
+//            return Environment.isExternalStorageManager() && result2 == PackageManager.PERMISSION_GRANTED ;
+//
+//        } else {
 
             int result = ContextCompat.checkSelfPermission(this,Manifest.permission.READ_EXTERNAL_STORAGE);
             int result1 = ContextCompat.checkSelfPermission(this,Manifest.permission.WRITE_EXTERNAL_STORAGE);
             int result2 = ContextCompat.checkSelfPermission(this,Manifest.permission.CAMERA);
 
             return result == PackageManager.PERMISSION_GRANTED && result1 == PackageManager.PERMISSION_GRANTED && result2 == PackageManager.PERMISSION_GRANTED;
-        }
+//        }
     }
 
     public void callCamera()
